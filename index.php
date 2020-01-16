@@ -24,6 +24,7 @@
        Job <input type="text" name="job" id="job"/></br></br>
        <input type="submit" name="submit" value="Submit" />
        <input type="submit" name="load_data" value="Load Data" />
+ <a href="computervision.php">Analisa Gambar!!!</a>
  </form>
  <?php
     $host = "rachelappserver.database.windows.net";
