@@ -69,21 +69,7 @@
         });
     };
 	
-	function processUpload() {
-		
-		$myfile = fopen("HelloWorld.txt", "w") or die("Unable to open file!");
-fclose($myfile);
- 
-# Mengunggah file sebagai block blob
-echo "Uploading BlockBlob: ".PHP_EOL;
-echo $fileToUpload;
-echo "<br />";
- 
-$content = fopen($fileToUpload, "r");
- 
-//Mengunggah blob
-$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-	}
+
 </script>
  
 <h1>Analyze image:</h1>
