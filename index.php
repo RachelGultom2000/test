@@ -96,8 +96,8 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "<YourKey>";
-$containerName = "<YourBlob>";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=rachelwebapp;AccountKey=lfT4XdHsUBZQQWk/GS+Kb1jmQ6Yr9JRELXe2uU6RR6IV5M6wsTetKoHmYkyxpQIgJ3BC+HJ7Ea/HRCzP84uwaQ==;EndpointSuffix=core.windows.net";
+$containerName = "rachelcontainer";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
