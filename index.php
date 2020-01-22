@@ -86,16 +86,18 @@
  </body>
  </html>
 
- <?php
+<?php
 require_once 'vendor/autoload.php';
 require_once "./random_string.php";
+
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 use MicrosoftAzure\Storage\Common\Exceptions\ServiceException;
 use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
-$connectionString = "rachelwebapp";
-$containerName = "lfT4XdHsUBZQQWk/GS+Kb1jmQ6Yr9JRELXe2uU6RR6IV5M6wsTetKoHmYkyxpQIgJ3BC+HJ7Ea/HRCzP84uwaQ";
+
+$connectionString = "<YourKey>";
+$containerName = "<YourBlob>";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
@@ -117,7 +119,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+    <!-- <link rel="icon" href="https://raw.githubusercontent.com/muhrizky/Smart-Parkir/master/parking_meter__2__Mrq_icon.ico"> -->
 
     <title>Image Analyzer App</title>
 
@@ -132,7 +134,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 <body>
 	<main role="main" class="container">
     		<div class="starter-template"> <br>
-        		<h1>Analisis Gambar</h1>
+        		<h1>Image Analyzer</h1>
 				<p class="lead">Pilih foto dari komputer yang ingin Anda analisis. lalu klik tombol <b>Upload</b> <br>Untuk memulai proses analisis foto, pilih tombol <b>Analyze!</b> pada pilihan gambar di masing-masing daftar.</p>
 				<span class="border-top my-3"></span>
 			</div>
